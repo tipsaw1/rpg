@@ -7,7 +7,11 @@ import classes.player_class as player_class
 
 screen = pygame.display.set_mode((SCREEN_W, SCREEN_H))
 clock = pygame.time.Clock()
-level_1 = level_class.Level(maps.level_1_map, (1,2,3,4))
+level_1 = level_class.Level(maps.level_1_map, "navajowhite2", img.tree_img_1)
+level_2 = level_class.Level(maps.level_2_map, "brown", img.tree_img_2)
+
+level_1.set_adjacents(None, None, None, level_2)
+level_2.set_adjacents(None, None, level_1, None)
 p1 = player_class.Player((TILE_SIZE, TILE_SIZE), 5, level_1)
 # Game loop
 running = True
@@ -21,20 +25,12 @@ while running:
         # Quit when red X is pressed
         if event.type == pygame.QUIT:
             running = False
-        if event.type == pygame.MOUSEBUTTONDOWN:
-            if event.button == 1:
-                obstacle_class.Obstacle(event.pos, img.tree_img_1, level_1)
-
-    # Player movement
-
-    # Background color
-    screen.fill("white")
 
     # Draw/update sprites
-    players.draw(screen)
-    players.update()
-    level_1.update()
-    level_1.draw(screen)
+    p1.level.update()
+    p1.level.draw(screen)
+    player_group.draw(screen)
+    player_group.update()
 
     # Screen update
     pygame.display.flip()

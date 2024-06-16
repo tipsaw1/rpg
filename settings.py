@@ -9,9 +9,7 @@ import assets.maps as maps
 pygame.init()
 
 # Sprite groups
-all_sprites = pygame.sprite.Group()
-enemies = pygame.sprite.Group()
-players = pygame.sprite.GroupSingle()
+player_group = pygame.sprite.GroupSingle()
 
 # Screen info
 SCREEN_W = 960

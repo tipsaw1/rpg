@@ -4,16 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="79b63553-cb34-47e8-b9cf-21615d014bd8" name="Changes" comment="Created a main.py file that contains the game loop and a settings.py file that contains the global variables and groups&#10;&#10;Created a player, map object, and enemy class using sprites&#10;&#10;Gave the player class collision detection and movement through keyboard inpout">
-      <change afterPath="$PROJECT_DIR$/assets/maps.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/classes/level_class.py" afterDir="false" />
+    <list default="true" id="79b63553-cb34-47e8-b9cf-21615d014bd8" name="Changes" comment="Added level class and map file&#10;&#10;Added grid-based map generation">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/images.py" beforeDir="false" afterPath="$PROJECT_DIR$/assets/images.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/classes/enemy.py" beforeDir="false" afterPath="$PROJECT_DIR$/classes/enemy_class.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/classes/map_objects.py" beforeDir="false" afterPath="$PROJECT_DIR$/classes/obstacle_class.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/classes/player.py" beforeDir="false" afterPath="$PROJECT_DIR$/classes/player_class.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/maps.py" beforeDir="false" afterPath="$PROJECT_DIR$/assets/maps.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/classes/level_class.py" beforeDir="false" afterPath="$PROJECT_DIR$/classes/level_class.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/classes/player_class.py" beforeDir="false" afterPath="$PROJECT_DIR$/classes/player_class.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/settings.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -131,11 +128,20 @@
       <option name="project" value="LOCAL" />
       <updated>1718562504611</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Added level class and map file&#10;&#10;Added grid-based map generation">
+      <option name="closed" value="true" />
+      <created>1718569787871</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1718569787871</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Created a main.py file that contains the game loop and a settings.py file that contains the global variables and groups&#10;&#10;Created a player, map object, and enemy class using sprites&#10;&#10;Gave the player class collision detection and movement through keyboard inpout" />
-    <option name="LAST_COMMIT_MESSAGE" value="Created a main.py file that contains the game loop and a settings.py file that contains the global variables and groups&#10;&#10;Created a player, map object, and enemy class using sprites&#10;&#10;Gave the player class collision detection and movement through keyboard inpout" />
+    <MESSAGE value="Added level class and map file&#10;&#10;Added grid-based map generation" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added level class and map file&#10;&#10;Added grid-based map generation" />
   </component>
 </project>

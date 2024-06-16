@@ -5,7 +5,7 @@ from settings import *
 
 class Player(pygame.sprite.Sprite):
     def __init__(self, pos, speed, level):
-        pygame.sprite.Sprite.__init__(self, all_sprites, players)
+        pygame.sprite.Sprite.__init__(self, player_group)
         self.inventory = []
         self.image = pygame.transform.scale(img.player_img, (TILE_SIZE, TILE_SIZE))
         self.rect = self.image.get_rect(topleft=pos)
@@ -19,20 +19,21 @@ class Player(pygame.sprite.Sprite):
     def update(self):
         self.check_keys()
         self.move()
+        self.check_borders()
 
     # Checks for keyboard input
     def check_keys(self):
         keys = pygame.key.get_pressed()
-        if keys[pygame.K_UP]:
+        if keys[pygame.K_UP] or keys[pygame.K_w]:
             self.dy -= self.speed
             self.facing = "up"
-        if keys[pygame.K_DOWN]:
+        if keys[pygame.K_DOWN] or keys[pygame.K_s]:
             self.dy += self.speed
             self.facing = "down"
-        if keys[pygame.K_LEFT]:
+        if keys[pygame.K_LEFT] or keys[pygame.K_a]:
             self.dx -= self.speed
             self.facing = "left"
-        if keys[pygame.K_RIGHT]:
+        if keys[pygame.K_RIGHT] or keys[pygame.K_d]:
             self.dx += self.speed
             self.facing = "right"
 
@@ -66,3 +67,20 @@ class Player(pygame.sprite.Sprite):
                 if self.dy > 0:
                     self.rect.bottom = collision.rect.top
 
+    def check_borders(self):
+        if self.level.up:
+            if self.rect.centery < 0:
+                self.level = self.level.up
+                self.rect.bottom = SCREEN_H
+        if self.level.down:
+            if self.rect.centery > SCREEN_H:
+                self.level = self.level.down
+                self.rect.top = 0
+        if self.level.left:
+            if self.rect.centerx < 0:
+                self.level = self.level.left
+                self.rect.right = SCREEN_W
+        if self.level.right:
+            if self.rect.centerx > SCREEN_W:
+                self.level = self.level.right
+                self.rect.left = 0
