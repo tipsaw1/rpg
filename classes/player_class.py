@@ -4,13 +4,14 @@ from settings import *
 
 
 class Player(pygame.sprite.Sprite):
-    def __init__(self, pos, speed):
+    def __init__(self, pos, speed, level):
         pygame.sprite.Sprite.__init__(self, all_sprites, players)
         self.inventory = []
-        self.image = img.player_img
+        self.image = pygame.transform.scale(img.player_img, (TILE_SIZE, TILE_SIZE))
         self.rect = self.image.get_rect(topleft=pos)
         self.speed = speed
         self.facing = ""
+        self.level = level
         self.dx = 0
         self.dy = 0
 
@@ -48,7 +49,7 @@ class Player(pygame.sprite.Sprite):
 
     # Checks for collisions
     def collide(self, direction):
-        collision = pygame.sprite.spritecollideany(self, map_objects)
+        collision = pygame.sprite.spritecollideany(self, self.level.obstacle_sprites)
 
         if collision:
             if direction == "x":
@@ -57,7 +58,7 @@ class Player(pygame.sprite.Sprite):
 
                 if self.dx < 0:
                     self.rect.left = collision.rect.right
-            
+
             if direction == "y":
                 if self.dy < 0:
                     self.rect.top = collision.rect.bottom

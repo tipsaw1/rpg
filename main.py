@@ -1,12 +1,14 @@
 # Imports
 from settings import *
-import classes.player as player
-import classes.enemy as enemy
-import classes.map_objects as collideable
+import classes.obstacle_class as obstacle_class
+import classes.enemy_class as enemy_class
+import classes.level_class as level_class
+import classes.player_class as player_class
 
 screen = pygame.display.set_mode((SCREEN_W, SCREEN_H))
-p1 = player.Player((SCREEN_W // 2, SCREEN_H // 2), 5)
-
+clock = pygame.time.Clock()
+level_1 = level_class.Level(maps.level_1_map, (1,2,3,4))
+p1 = player_class.Player((TILE_SIZE, TILE_SIZE), 5, level_1)
 # Game loop
 running = True
 while running:
@@ -21,7 +23,7 @@ while running:
             running = False
         if event.type == pygame.MOUSEBUTTONDOWN:
             if event.button == 1:
-                collideable.Map_object(event.pos, img.tree_img_1)
+                obstacle_class.Obstacle(event.pos, img.tree_img_1, level_1)
 
     # Player movement
 
@@ -29,12 +31,14 @@ while running:
     screen.fill("white")
 
     # Draw/update sprites
-    all_sprites.update()
-    all_sprites.draw(screen)
+    players.draw(screen)
+    players.update()
+    level_1.update()
+    level_1.draw(screen)
 
     # Screen update
     pygame.display.flip()
-    clock.tick(60)
+    clock.tick(FPS)
 
 # Close window
 pygame.quit()
