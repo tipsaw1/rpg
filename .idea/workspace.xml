@@ -4,16 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="79b63553-cb34-47e8-b9cf-21615d014bd8" name="Changes" comment="Added the ability to move between levels&#10;&#10;Added level color customization&#10;&#10;Added a second level">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/maps.py" beforeDir="false" afterPath="$PROJECT_DIR$/assets/maps.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/classes/enemy_class.py" beforeDir="false" afterPath="$PROJECT_DIR$/classes/enemy_class.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/classes/level_class.py" beforeDir="false" afterPath="$PROJECT_DIR$/classes/level_class.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/classes/obstacle_class.py" beforeDir="false" afterPath="$PROJECT_DIR$/classes/obstacle_class.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/classes/player_class.py" beforeDir="false" afterPath="$PROJECT_DIR$/classes/player_class.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/settings.py" afterDir="false" />
-    </list>
+    <list default="true" id="79b63553-cb34-47e8-b9cf-21615d014bd8" name="Changes" comment="Updated enemy class and added Dasher subclass. &#10;&#10;Added hp, damage, and invincibility frames&#10;&#10;Level class is re-initialized upon the player entering the level&#10;&#10;Gave the player the ability to dash (cooldown not implemented yet)&#10;&#10;Gave enemies collision and movement" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -146,13 +137,22 @@
       <option name="project" value="LOCAL" />
       <updated>1718572610178</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Updated enemy class and added Dasher subclass. &#10;&#10;Added hp, damage, and invincibility frames&#10;&#10;Level class is re-initialized upon the player entering the level&#10;&#10;Gave the player the ability to dash (cooldown not implemented yet)&#10;&#10;Gave enemies collision and movement">
+      <option name="closed" value="true" />
+      <created>1718585756863</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1718585756863</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Created a main.py file that contains the game loop and a settings.py file that contains the global variables and groups&#10;&#10;Created a player, map object, and enemy class using sprites&#10;&#10;Gave the player class collision detection and movement through keyboard inpout" />
     <MESSAGE value="Added level class and map file&#10;&#10;Added grid-based map generation" />
     <MESSAGE value="Added the ability to move between levels&#10;&#10;Added level color customization&#10;&#10;Added a second level" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added the ability to move between levels&#10;&#10;Added level color customization&#10;&#10;Added a second level" />
+    <MESSAGE value="Updated enemy class and added Dasher subclass. &#10;&#10;Added hp, damage, and invincibility frames&#10;&#10;Level class is re-initialized upon the player entering the level&#10;&#10;Gave the player the ability to dash (cooldown not implemented yet)&#10;&#10;Gave enemies collision and movement" />
+    <option name="LAST_COMMIT_MESSAGE" value="Updated enemy class and added Dasher subclass. &#10;&#10;Added hp, damage, and invincibility frames&#10;&#10;Level class is re-initialized upon the player entering the level&#10;&#10;Gave the player the ability to dash (cooldown not implemented yet)&#10;&#10;Gave enemies collision and movement" />
   </component>
 </project>

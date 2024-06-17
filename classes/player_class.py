@@ -34,9 +34,6 @@ class Player(pygame.sprite.Sprite):
         self.check_keys()
         self.move()
         self.check_borders()
-        if self.hp == 0:
-            print("GAME OVER....")
-            self.kill()
 
     # Checks for keyboard input
     def check_keys(self):
