@@ -9,13 +9,14 @@ import assets.maps as maps
 pygame.init()
 
 # Sprite groups
-player_group = pygame.sprite.GroupSingle()
+player_sprite = pygame.sprite.GroupSingle()
 
 # Screen info
 SCREEN_W = 960
 SCREEN_H = 960
 TILE_SIZE = SCREEN_W/20
 FPS = 60
+
 
 def calculate_movement(dx, dy, speed):
     angle = math.atan2(dy, dx)
